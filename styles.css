@@ -313,15 +313,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 .about-text {
     flex: 1; /* Takes up available space */
 }
