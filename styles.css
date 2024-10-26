@@ -1,0 +1,359 @@
+/* Default layout: image on the side */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-text {
+    flex: 1; 
+}
+
+.about-image {
+    flex: 0 0 auto; 
+    margin-left: 20px;
+}
+
+.about-image img {
+    width: 175px; 
+    height: auto; 
+    border-radius: 250px;
+}
+
+/* Mobile layout: image below the text */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; 
+    }
+
+    .about-image {
+        margin-top: 20px;       
+        margin-left: 0;       
+    }
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #faf7f0;
+    color: #444;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.logo-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    transition: transform 0.5s ease, top 0.5s ease;
+}
+
+.logo-container2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    transition: transform 0.5s ease, top 0.5s ease;
+}
+
+#logo {
+    width: 175px;
+    transition: width 0.5s ease;
+}
+
+#myfarm #logo {
+    width: 120px;
+}
+
+#nutrient-deficiencies #logo {
+    width: 120px;
+}
+
+#acuity #logo {
+    width: 120px;
+}
+
+.doodles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.doodle {
+    position: absolute;
+    width: 55px;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Position doodles around the logo */
+.doodle:nth-child(1) { transform: translate(-100px, -120px); }
+.doodle:nth-child(2) { transform: translate(100px, -100px); }
+.doodle:nth-child(3) { transform: translate(-100px, 100px); }
+.doodle:nth-child(4) { transform: translate(-10px, 40px); }
+.doodle:nth-child(5) { transform: translate(65px, 100px); }
+.doodle:nth-child(6) { transform: translate(10px, -150px); }
+.doodle:nth-child(7) { transform: translate(150px, -10px); }
+.doodle:nth-child(8) { transform: translate(-175px, 10px); }
+.doodle:nth-child(9) {
+    width: 100px;
+    transform: translate(-180px, -140px) rotate(-30deg);
+}
+.doodle:nth-child(10) {
+    width: 90px; 
+    transform: translate(170px, 100px);
+}
+
+#content {
+    padding: 100vh 20px 20px; /* Start content after the animation */
+}
+
+#myfarm #content {
+    padding: 20px;
+}
+
+#nutrient-deficiencies #content {
+    padding: 20px;
+}
+
+#acuity #content {
+    padding: 20px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+}
+
+.shrunk-logo {
+    width: 80px;
+}
+
+.dispersed {
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.doodle:nth-child(1).dispersed { transform: translate(-500px, -120px); }
+.doodle:nth-child(2).dispersed { transform: translate(500px, -100px); }
+.doodle:nth-child(3).dispersed { transform: translate(-500px, 100px); }
+.doodle:nth-child(4).dispersed { transform: translate(-10px, 500px); }
+.doodle:nth-child(5).dispersed { transform: translate(500px, 100px); }
+.doodle:nth-child(6).dispersed { transform: translate(10px, -500px); }
+.doodle:nth-child(7).dispersed { transform: translate(500px, -10px); }
+.doodle:nth-child(8).dispersed { transform: translate(-500px, 10px); }
+.doodle:nth-child(9).dispersed {
+    width: 100px;
+    transform: translate(-500px, -500px) rotate(-30deg);
+}
+.doodle:nth-child(10).dispersed {
+    width: 90px; 
+    transform: translate(500px, 500px);
+}
+
+.hidden {
+    display: none;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 60px; /* Adjust based on the size of your sticky logo */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    width: 300px; /* Adjust width based on your design */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-item {
+    margin: 0 15px; /* Adjust spacing between icons as needed */
+    display: inline-block;
+}
+
+.nav-item img {
+    transition: transform 0.3s ease;
+}
+
+.nav-item img:hover {
+    transform: scale(1.1); /* Enlarge icon on hover */
+}
+
+.about-icon {
+    width: 55px;
+}
+
+.portfolio-icon {
+    width: 83px;
+}
+
+.contact-icon {
+    width: 70px;
+}
+
+.nav-bar.show {
+    opacity: 1;
+}
+
+.nav-bar a {
+    text-decoration: none;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #81A969;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Portfolio Item Styles */
+.portfolio-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.portfolio-item h3 {
+    margin-top: 0;
+}
+
+.portfolio-item a {
+    color: #81A969;
+    font-weight: bold;
+}
+
+.portfolio-item a:hover {
+    text-decoration: underline;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-text {
+    flex: 1; /* Takes up available space */
+}
+
+.about-image {
+    flex: 0 0 auto; /* Adjust size based on content */
+    margin-left: 20px; /* Space between text and image */
+}
+
+.about-image img {
+    width: 175px; /* Set a fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 250px; /* for rounding */
+}
+
+footer {
+    background-color: #f8f8f8; /* Light background color */
+    color: #444; /* Text color */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Padding around the text */
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Stretch footer across the entire width */
+    border-top: 1px solid #ddd; /* Optional: add a top border */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 0.9em; /* Slightly smaller text size */
+}
+
+#myfarm_images {
+    margin: 40px 0; /* Add spacing around the section */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Space between images */
+    max-width: 800px; /* Set a max width */
+    margin: 0 auto; /* Center the grid */
+}
+
+.image-item img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a slight shadow */
+}
+
+.poster-section {
+    text-align: center; /* Center the poster */
+    margin: 20px 0; /* Add spacing around the poster section */
+}
+
+.poster-thumbnail {
+    width: 100%; /* Make the image responsive */
+    max-width: 400px; /* Set a maximum width for the thumbnail */
+    cursor: pointer; /* Change cursor to pointer to indicate clickability */
+}
+
+/* Style for the presentation section */
+.presentation-section {
+    text-align: center; /* Center-align the presentation link */
+    margin: 20px 0; /* Add spacing around the presentation section */
+}
+
+/* Style for the thumbnail */
+.presentation-thumbnail {
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    cursor: pointer; /* Change cursor to pointer to indicate clickability */
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.presentation-thumbnail:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
