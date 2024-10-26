@@ -69,18 +69,6 @@ body {
     transition: width 0.5s ease;
 }
 
-#myfarm #logo {
-    width: 120px;
-}
-
-#nutrient-deficiencies #logo {
-    width: 120px;
-}
-
-#acuity #logo {
-    width: 120px;
-}
-
 .doodles {
     position: absolute;
     top: 50%;
@@ -114,18 +102,6 @@ body {
 
 #content {
     padding: 100vh 20px 20px; /* Start content after the animation */
-}
-
-#myfarm #content {
-    padding: 20px;
-}
-
-#nutrient-deficiencies #content {
-    padding: 20px;
-}
-
-#acuity #content {
-    padding: 20px;
 }
 
 .sticky {
@@ -197,7 +173,7 @@ body {
 .portfolio-icon,
 .contact-icon,
 .experience-icon { 
-    width: 60px; /* Ensure all icons have the same width for consistency */
+    width: 70px; /* Ensure all icons have the same width for consistency */
 }
 
 .contact-icon {
