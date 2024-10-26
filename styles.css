@@ -224,6 +224,48 @@ h2 {
     color: #333;
 }
 
+
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.experience-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 200px;
+    height: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex; 
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Push content to top and bottom */
+}
+
+.experience-box p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.experience-box a {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #6BB56B; /* Green color for links */
+    text-decoration: none;
+}
+
+.experience-box a:hover {
+    text-decoration: underline;
+}
+
 p {
     font-size: 1.1em;
     line-height: 1.6;
