@@ -160,8 +160,6 @@ body {
 }
 
 .nav-item img {
-    width: 60px; /* Make all icons the same size */
-    height: auto;
     transition: transform 0.3s ease;
 }
 
@@ -169,11 +167,16 @@ body {
     transform: scale(1.1); /* Enlarge icon on hover */
 }
 
-.about-icon,
-.portfolio-icon,
-.contact-icon,
-.experience-icon { 
-    width: 70px; /* Ensure all icons have the same width for consistency */
+.about-icon {
+    width: 50px;
+}
+
+.experience-icon {
+    max-width: 85px;
+}
+
+.portfolio-icon {
+    width: 80px;
 }
 
 .contact-icon {
