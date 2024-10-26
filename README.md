@@ -1,1 +1,2 @@
-Juhi Maharjan's personal website and portfolio. 
+# Juhi Maharjan's personal website and portfolio. 
+
